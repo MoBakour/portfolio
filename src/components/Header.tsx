@@ -108,7 +108,7 @@ const Header = ({ sections }: IHeader) => {
 							className="w-fit lg:w-auto transition hover:text-slate-200 group"
 						>
 							<a
-								href={`#${nav}`}
+								href={`#${nav.toLowerCase()}`}
 								className="flex py-2 lg:justify-center items-center"
 							>
 								<p className="uppercase w-28 font-bold">

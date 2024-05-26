@@ -6,7 +6,11 @@ import Header from "./components/Header";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 
-const sections = [About, Skills, Projects];
+const sections = [
+	{ name: "about", element: <About /> },
+	{ name: "skills", element: <Skills /> },
+	{ name: "projects", element: <Projects /> },
+];
 
 const App = () => {
 	const bubbleRef = useRef<HTMLDivElement>(null);
@@ -38,12 +42,12 @@ const App = () => {
 				<Header sections={sections.map((section) => section.name)} />
 
 				<main className="w-[60%] lg:w-[90%] sm:w-[95%] sm:px-0 flex flex-col px-8 animate-slideFromRight">
-					{sections.map((Section, index) => (
+					{sections.map((section, index) => (
 						<FadeInDiv
 							key={index}
 							className="min-h-screen py-10 flex justify-center items-center"
 						>
-							<Section />
+							{section.element}
 						</FadeInDiv>
 					))}
 				</main>
