@@ -7,6 +7,8 @@ import StockAIThumbnail from "../images/stockai-thumbnail.png";
 import WeSchoolThumbnail from "../images/weschool-thumbnail.png";
 import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
+import Line from "./Line";
+import FadeInDiv from "./FadeInDiv";
 
 enum Techs {
 	HTML = "HTML",
@@ -55,7 +57,7 @@ const projects: IProject[] = [
 		],
 	},
 	{
-		title: "PotatoDB - Filesystem DB Package",
+		title: "PotatoDB - NPM Library for Creating Filesystem Databases",
 		description:
 			"An npm library for creating and managing local filesystem based databases in Node.js servers",
 		image: PotatoDBThumbnail,
@@ -73,7 +75,7 @@ const projects: IProject[] = [
 		stack: [Techs.PYTHON, Techs.TYPESCRIPT, Techs.REACT, Techs.TAILWIND],
 	},
 	{
-		title: "WeSchool - Class Management App",
+		title: "WeSchool - Class Management Web App",
 		description:
 			"A web app for managing school classrooms and students. Features authentication, validation, and various CRUD operations.",
 		image: WeSchoolThumbnail,
@@ -114,7 +116,7 @@ interface IProjectProps {
 const Project = ({ project }: IProjectProps) => {
 	return (
 		<a href={project.repo} target="_blank">
-			<div className="group-hover:opacity-60 group p-4 py-6 flex sm:flex-col-reverse gap-4 transition rounded-lg hover:!opacity-100 hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg cursor-pointer">
+			<div className="group-hover:opacity-60 md:!opacity-100 group p-4 py-6 flex sm:flex-col-reverse gap-4 transition rounded-lg hover:!opacity-100 hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg md:hover:bg-transparent md:hover:shadow-none md:hover:drop-shadow-none cursor-pointer">
 				<div className="flex flex-col w-fit gap-2">
 					<img
 						src={project.image}
@@ -166,10 +168,20 @@ const Project = ({ project }: IProjectProps) => {
 
 const Projects = () => {
 	return (
-		<section id="projects" className="flex flex-col gap-6 group">
-			{projects.map((project) => (
-				<Project key={project.title} project={project} />
-			))}
+		<section id="projects">
+			<h2 className="uppercase text-lg font-bold">Projects</h2>
+
+			<div className="p-4 relative group flex flex-col gap-6">
+				{/* decoration lines */}
+				<Line top left horizontal long />
+				<Line top left vertical short />
+
+				{projects.map((project) => (
+					<FadeInDiv percentage={10} key={project.title}>
+						<Project project={project} />
+					</FadeInDiv>
+				))}
+			</div>
 		</section>
 	);
 };

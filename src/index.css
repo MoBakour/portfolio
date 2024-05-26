@@ -87,3 +87,17 @@
 		width: 100%;
 	}
 }
+
+.animate-unprogress {
+	animation: unprogress 1s forwards;
+}
+
+@keyframes unprogress {
+	from {
+		width: 100%;
+	}
+
+	to {
+		width: 0;
+	}
+}

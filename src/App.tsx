@@ -19,8 +19,10 @@ const App = () => {
 		const handleMouseMove = (e: MouseEvent) => {
 			if (!bubbleRef.current) return;
 
-			bubbleRef.current.style.left = e.pageX.toString() + "px";
-			bubbleRef.current.style.top = e.pageY.toString() + "px";
+			const { width } = bubbleRef.current.getBoundingClientRect();
+
+			bubbleRef.current.style.left = e.pageX - width / 2 + "px";
+			bubbleRef.current.style.top = e.pageY - width / 2 + "px";
 		};
 
 		window.addEventListener("mousemove", handleMouseMove);
@@ -32,10 +34,10 @@ const App = () => {
 
 	return (
 		<div className="app min-h-screen bg-slate-900 text-slate-200/80">
-			{/* decoration bubble element */}
+			{/* decoration moving bubble */}
 			<div
 				ref={bubbleRef}
-				className="w-[calc(100vw/2)] h-[calc(100vw/2)] rounded-full bg-sky-600 absolute blur-[200px] opacity-20 pointer-events-none -z-10 -translate-x-1/2 -translate-y-1/2"
+				className="w-[calc(100vw/2)] h-[calc(100vw/2)] rounded-full bg-sky-600 absolute blur-[200px] opacity-20 pointer-events-none lg:hidden"
 			/>
 
 			<div className="max-w-[1100px] m-auto flex lg:flex-col lg:items-center">

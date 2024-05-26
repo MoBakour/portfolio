@@ -3,10 +3,16 @@ import { useEffect, useRef, useState } from "react";
 interface IFadeInDivProps {
 	children: React.ReactNode;
 	className?: string;
+	percentage?: number;
 	[key: string]: any;
 }
 
-const FadeInDiv = ({ children, className, ...rest }: IFadeInDivProps) => {
+const FadeInDiv = ({
+	children,
+	className,
+	percentage = 30,
+	...rest
+}: IFadeInDivProps) => {
 	const domRef = useRef<HTMLDivElement>(null);
 	const [visible, setVisible] = useState<boolean>(false);
 
@@ -18,7 +24,7 @@ const FadeInDiv = ({ children, className, ...rest }: IFadeInDivProps) => {
 				setVisible(entries[0].isIntersecting);
 			},
 			{
-				rootMargin: "0px 0px -30% 0px",
+				rootMargin: `-${percentage}% 0px`,
 			}
 		);
 

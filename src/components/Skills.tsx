@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import Line from "./Line";
 
 const skills = [
 	{
@@ -55,7 +56,7 @@ const Skills = () => {
 				setVisible(entries[0].isIntersecting);
 			},
 			{
-				rootMargin: "0px 0px -30% 0px",
+				rootMargin: "-30% 0px",
 			}
 		);
 
@@ -66,28 +67,39 @@ const Skills = () => {
 
 	return (
 		<section id="skills" ref={domRef}>
-			{skills.map((skill) => (
-				<div
-					key={skill.name}
-					className="flex justify-start items-center py-3 group"
-				>
-					<p className="w-[140px] sm:w-[100px] sm:text-sm transition group-hover:text-slate-200">
-						{skill.name}
-					</p>
-					<div className="w-[240px] sm:w-[180px] relative">
-						<div
-							className="overflow-hidden rounded"
-							style={{ width: `${skill.percentage}%` }}
-						>
+			<h2 className="uppercase text-lg font-bold">Skills</h2>
+
+			<div className="px-4 py-1 relative">
+				{/* decoration corners */}
+				<Line top left horizontal short />
+				<Line top left vertical long />
+
+				{/* skills */}
+				{skills.map((skill) => (
+					<div
+						key={skill.name}
+						className="flex justify-start items-center py-3 group"
+					>
+						<p className="w-[140px] sm:w-[100px] sm:text-sm transition group-hover:text-slate-200">
+							{skill.name}
+						</p>
+						<div className="w-[240px] sm:w-[180px] relative">
 							<div
-								className={`h-[3px] bg-teal-400 ${
-									visible ? "animate-progress" : "w-0"
-								}`}
-							/>
+								className="overflow-hidden rounded"
+								style={{ width: `${skill.percentage}%` }}
+							>
+								<div
+									className={`h-[3px] bg-teal-400 ${
+										visible
+											? "animate-progress"
+											: "animate-unprogress"
+									}`}
+								/>
+							</div>
 						</div>
 					</div>
-				</div>
-			))}
+				))}
+			</div>
 		</section>
 	);
 };

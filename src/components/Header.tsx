@@ -10,7 +10,6 @@ const phrases = [
 	"University Student",
 	"Web Developer",
 	"JavaScripter",
-	"Syrian",
 ];
 
 const contacts = [
@@ -82,20 +81,20 @@ const Header = ({ sections }: IHeader) => {
 	}, []);
 
 	return (
-		<header className="w-[40%] lg:w-[90%] h-screen py-20 px-4 sm:px-0 flex flex-col lg:items-center justify-between sticky lg:static top-0 animate-slideFromLeft">
+		<header className="w-[40%] lg:w-[90%] h-screen md:h-auto md:gap-16 py-20 px-4 sm:px-0 flex flex-col lg:items-center justify-between sticky lg:static top-0 animate-slideFromLeft">
 			{/* top */}
 			<div>
 				<h1 className="text-slate-200 text-4xl font-bold">
 					Mohamed Bakour
 				</h1>
-				<h2 className="text-xl">
+				<h2 className="text-slate-200 text-xl">
 					{display}
 					<span className="pl-[1px] animate-blink">|</span>
 				</h2>
-				<p className="pt-4">
-					I love building software
+				<p className="pt-4 text-sm">
+					In the world of tech we say
 					<br />
-					and hunting bugs!
+					If it works, don't touch it
 				</p>
 			</div>
 

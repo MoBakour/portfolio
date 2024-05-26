@@ -1,62 +1,13 @@
 import IconDownload from "../icons/IconDownload";
-
-interface ILine {
-	className?: "";
-	vertical?: boolean;
-	horizontal?: boolean;
-	top?: boolean;
-	left?: boolean;
-	bottom?: boolean;
-	right?: boolean;
-	short?: boolean;
-	long?: boolean;
-}
-
-const Line = ({
-	className = "",
-	vertical = false,
-	horizontal = false,
-	top = false,
-	left = false,
-	bottom = false,
-	right = false,
-	short = false,
-	long = false,
-}: ILine) => {
-	return (
-		<div
-			className={`bg-teal-400 rounded absolute ${className}`}
-			style={{
-				top: top ? "0" : "auto",
-				left: left ? "0" : "auto",
-				bottom: bottom ? "0" : "auto",
-				right: right ? "0" : "auto",
-				width: (() => {
-					if (vertical) return "3px";
-					else if (horizontal && short) {
-						return "60px";
-					} else if (horizontal && long) {
-						return "90px";
-					}
-				})(),
-				height: (() => {
-					if (horizontal) return "3px";
-					else if (vertical && short) {
-						return "60px";
-					} else if (vertical && long) {
-						return "90px";
-					}
-				})(),
-			}}
-		/>
-	);
-};
+import Line from "./Line";
 
 const About = () => {
 	return (
 		<section id="about">
+			<h2 className="uppercase text-lg font-bold">About</h2>
+
 			<article className="p-4 relative">
-				{/* design */}
+				{/* decoration corners */}
 				<Line top left horizontal short />
 				<Line top left vertical long />
 				<Line bottom right horizontal short />
@@ -90,7 +41,7 @@ const About = () => {
 
 			<a
 				title="Download Resume"
-				className="cursor-pointer w-fit flex justify-center items-center gap-2 bg-teal-400 font-bold text-xl rounded-full py-2 px-4 m-auto mt-8 opacity-80 transition hover:opacity-100"
+				className="cursor-pointer w-fit flex justify-center items-center gap-2 bg-teal-400/20 text-teal-400 font-bold text-xl rounded-full py-2 px-4 m-auto mt-8 transition hover:opacity-80"
 				href="/Mohamed_Bakour_Resume.docx"
 				download="Mohamed_Bakour_Resume.docx"
 			>
