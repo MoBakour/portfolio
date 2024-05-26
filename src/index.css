@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: "Quicksand";
+	scroll-behavior: smooth;
+}
+
+/* scrollbar styling */
+::-webkit-scrollbar {
+	width: 5px;
+	@apply w-[5px] bg-slate-900;
+}
+
+::-webkit-scrollbar-thumb {
+	@apply bg-teal-400 rounded-full;
+}
+
+.app {
+	contain: paint;
+}
+
+/* animations */
+.animate-blink {
+	animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.animate-slideFromLeft {
+	animation: slideFromLeft 1s forwards;
+}
+
+@keyframes slideFromLeft {
+	from {
+		transform: translateX(-100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.animate-slideFromRight {
+	animation: slideFromRight 1s forwards;
+}
+
+@keyframes slideFromRight {
+	from {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.animate-progress {
+	animation: progress 1s forwards;
+}
+
+@keyframes progress {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
