@@ -6,8 +6,13 @@ interface ILine {
 	left?: boolean;
 	bottom?: boolean;
 	right?: boolean;
-	short?: boolean;
-	long?: boolean;
+	size?: "short" | "long" | "longer";
+}
+
+enum Sizes {
+	SHORT = 60,
+	LONG = 90,
+	LONGER = 105,
 }
 
 const Line = ({
@@ -18,8 +23,7 @@ const Line = ({
 	left = false,
 	bottom = false,
 	right = false,
-	short = false,
-	long = false,
+	size = "short",
 }: ILine) => {
 	return (
 		<div
@@ -31,19 +35,19 @@ const Line = ({
 				right: right ? "0" : "auto",
 				width: (() => {
 					if (vertical) return "3px";
-					else if (horizontal && short) {
-						return "60px";
-					} else if (horizontal && long) {
-						return "90px";
-					}
+					if (horizontal)
+						return (
+							Sizes[size.toUpperCase() as keyof typeof Sizes] +
+							"px"
+						);
 				})(),
 				height: (() => {
 					if (horizontal) return "3px";
-					else if (vertical && short) {
-						return "60px";
-					} else if (vertical && long) {
-						return "90px";
-					}
+					if (vertical)
+						return (
+							Sizes[size.toUpperCase() as keyof typeof Sizes] +
+							"px"
+						);
 				})(),
 			}}
 		/>

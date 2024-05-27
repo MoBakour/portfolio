@@ -9,6 +9,7 @@ import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
 import Line from "./Line";
 import FadeInDiv from "./FadeInDiv";
+import Bullets from "./Bullets";
 
 enum Techs {
 	HTML = "HTML",
@@ -38,7 +39,7 @@ interface IProject {
 	stack: string[];
 }
 
-const projects: IProject[] = [
+const projectsData: IProject[] = [
 	{
 		title: "Peeko - Social Media Web App",
 		description:
@@ -109,11 +110,11 @@ const projects: IProject[] = [
 	},
 ];
 
-interface IProjectProps {
+interface IProjectCard {
 	project: IProject;
 }
 
-const Project = ({ project }: IProjectProps) => {
+const ProjectCard = ({ project }: IProjectCard) => {
 	return (
 		<a href={project.repo} target="_blank">
 			<div className="group-hover/container:opacity-60 md:!opacity-100 hover:!opacity-100 group/card p-4 py-6 flex sm:flex-col-reverse gap-4 transition rounded-lg hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg md:hover:bg-transparent md:hover:shadow-none md:hover:drop-shadow-none cursor-pointer">
@@ -150,16 +151,7 @@ const Project = ({ project }: IProjectProps) => {
 						<IconExternalLink className="inline-block ml-2 mb-2 group-hover/card:text-teal-400 md:group-hover/card:text-slate-200 transition" />
 					</h3>
 					<p className="text-sm">{project.description}</p>
-					<ul className="flex flex-wrap gap-2">
-						{project.stack.map((tech) => (
-							<li
-								key={tech}
-								className="px-2 py-1 bg-teal-400/20 text-teal-400 font-bold rounded-full text-xs"
-							>
-								{tech}
-							</li>
-						))}
-					</ul>
+					<Bullets bullets={project.stack} />
 				</div>
 			</div>
 		</a>
@@ -173,12 +165,12 @@ const Projects = () => {
 
 			<div className="p-4 relative group/container flex flex-col gap-6">
 				{/* decoration lines */}
-				<Line top left horizontal long />
-				<Line top left vertical short />
+				<Line top left horizontal size="long" />
+				<Line top left vertical size="short" />
 
-				{projects.map((project) => (
+				{projectsData.map((project) => (
 					<FadeInDiv percentage={10} key={project.title}>
-						<Project project={project} />
+						<ProjectCard project={project} />
 					</FadeInDiv>
 				))}
 			</div>

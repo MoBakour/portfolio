@@ -2,12 +2,13 @@ import { useEffect, useRef } from "react";
 import FadeInDiv from "./components/FadeInDiv";
 import About from "./components/About";
 import Header from "./components/Header";
-// import Education from "./components/Education";
+import Education from "./components/Education";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 
 const sections = [
 	{ name: "about", element: <About /> },
+	{ name: "education", element: <Education /> },
 	{ name: "skills", element: <Skills /> },
 	{ name: "projects", element: <Projects /> },
 ];
@@ -64,9 +65,9 @@ const App = () => {
 					className="text-teal-400"
 					target="_blank"
 				>
-					Brittany Chiang's
-				</a>{" "}
-				portfolio
+					Brittany Chiang
+				</a>
+				's portfolio
 			</p>
 		</div>
 	);

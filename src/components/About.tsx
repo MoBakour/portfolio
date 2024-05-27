@@ -8,10 +8,10 @@ const About = () => {
 
 			<article className="p-4 relative">
 				{/* decoration corners */}
-				<Line top left horizontal short />
-				<Line top left vertical long />
-				<Line bottom right horizontal short />
-				<Line bottom right vertical long />
+				<Line top left horizontal size="short" />
+				<Line top left vertical size="long" />
+				<Line bottom right horizontal size="short" />
+				<Line bottom right vertical size="long" />
 
 				{/* paragraphs */}
 				<p>
