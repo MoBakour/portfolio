@@ -35,11 +35,15 @@ const App = () => {
 
 	return (
 		<div className="min-h-screen bg-slate-900 text-slate-200/80">
-			{/* decoration moving bubble */}
+			{/* decorative moving bubble */}
 			<div
 				ref={bubbleRef}
 				className="w-[calc(100vw/2)] h-[calc(100vw/2)] rounded-full bg-sky-600 fixed blur-[200px] opacity-20 pointer-events-none md:hidden"
 			/>
+
+			{/* decorative static bubbles */}
+			<div className="w-[calc(100vw)] h-[calc(100vw)] rounded-full bg-sky-600 fixed -top-1/4 -left-1/2 blur-[100px] opacity-20 pointer-events-none hidden md:block" />
+			<div className="w-[calc(100vw)] h-[calc(100vw)] rounded-full bg-sky-600 fixed -bottom-1/4 -right-1/2 blur-[100px] opacity-20 pointer-events-none hidden md:block" />
 
 			<div className="max-w-[1100px] m-auto flex lg:flex-col lg:items-center">
 				<Header sections={sections.map((section) => section.name)} />
