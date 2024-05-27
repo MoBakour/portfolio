@@ -71,8 +71,8 @@ const Skills = () => {
 
 			<div className="px-4 py-1 relative">
 				{/* decoration corners */}
-				<Line top left horizontal short />
-				<Line top left vertical long />
+				<Line top left horizontal size="short" />
+				<Line top left vertical size="long" />
 
 				{/* skills */}
 				{skills.map((skill) => (
