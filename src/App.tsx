@@ -33,7 +33,7 @@ const App = () => {
 	}, []);
 
 	return (
-		<div className="app min-h-screen bg-slate-900 text-slate-200/80">
+		<div className="min-h-screen bg-slate-900 text-slate-200/80">
 			{/* decoration moving bubble */}
 			<div
 				ref={bubbleRef}

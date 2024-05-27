@@ -116,7 +116,7 @@ interface IProjectProps {
 const Project = ({ project }: IProjectProps) => {
 	return (
 		<a href={project.repo} target="_blank">
-			<div className="group-hover:opacity-60 md:!opacity-100 group p-4 py-6 flex sm:flex-col-reverse gap-4 transition rounded-lg hover:!opacity-100 hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg md:hover:bg-transparent md:hover:shadow-none md:hover:drop-shadow-none cursor-pointer">
+			<div className="group-hover/container:opacity-60 md:!opacity-100 hover:!opacity-100 group/card p-4 py-6 flex sm:flex-col-reverse gap-4 transition rounded-lg hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg md:hover:bg-transparent md:hover:shadow-none md:hover:drop-shadow-none cursor-pointer">
 				<div className="flex flex-col w-fit gap-2">
 					<img
 						src={project.image}
@@ -147,7 +147,7 @@ const Project = ({ project }: IProjectProps) => {
 				<div className="flex flex-col gap-2">
 					<h3 className="text-slate-200 font-bold text-lg">
 						{project.title}
-						<IconExternalLink className="inline-block ml-2 mb-2 group-hover:text-teal-400 transition" />
+						<IconExternalLink className="inline-block ml-2 mb-2 group-hover/card:text-teal-400 md:group-hover/card:text-slate-200 transition" />
 					</h3>
 					<p className="text-sm">{project.description}</p>
 					<ul className="flex flex-wrap gap-2">
@@ -171,7 +171,7 @@ const Projects = () => {
 		<section id="projects">
 			<h2 className="uppercase text-lg font-bold">Projects</h2>
 
-			<div className="p-4 relative group flex flex-col gap-6">
+			<div className="p-4 relative group/container flex flex-col gap-6">
 				{/* decoration lines */}
 				<Line top left horizontal long />
 				<Line top left vertical short />

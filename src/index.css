@@ -19,7 +19,7 @@
 	@apply bg-teal-400 rounded-full;
 }
 
-.app {
+#root > div {
 	contain: paint;
 }
 
