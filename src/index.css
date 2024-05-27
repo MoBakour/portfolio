@@ -19,8 +19,8 @@
 	@apply bg-teal-400 rounded-full;
 }
 
-#root > div {
-	contain: paint;
+html {
+	overflow-x: hidden;
 }
 
 /* animations */

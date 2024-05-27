@@ -21,8 +21,8 @@ const App = () => {
 
 			const { width } = bubbleRef.current.getBoundingClientRect();
 
-			bubbleRef.current.style.left = e.pageX - width / 2 + "px";
-			bubbleRef.current.style.top = e.pageY - width / 2 + "px";
+			bubbleRef.current.style.left = e.clientX - width / 2 + "px";
+			bubbleRef.current.style.top = e.clientY - width / 2 + "px";
 		};
 
 		window.addEventListener("mousemove", handleMouseMove);
@@ -37,13 +37,13 @@ const App = () => {
 			{/* decoration moving bubble */}
 			<div
 				ref={bubbleRef}
-				className="w-[calc(100vw/2)] h-[calc(100vw/2)] rounded-full bg-sky-600 absolute blur-[200px] opacity-20 pointer-events-none lg:hidden"
+				className="w-[calc(100vw/2)] h-[calc(100vw/2)] rounded-full bg-sky-600 fixed blur-[200px] opacity-20 pointer-events-none md:hidden"
 			/>
 
 			<div className="max-w-[1100px] m-auto flex lg:flex-col lg:items-center">
 				<Header sections={sections.map((section) => section.name)} />
 
-				<main className="w-[60%] lg:w-[90%] sm:w-[95%] sm:px-0 flex flex-col px-8 animate-slideFromRight">
+				<main className="w-[60%] lg:w-[90%] sm:w-[95%] sm:px-0 flex flex-col px-8">
 					{sections.map((section, index) => (
 						<FadeInDiv
 							key={index}
