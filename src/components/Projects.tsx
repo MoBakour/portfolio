@@ -146,9 +146,9 @@ const ProjectCard = ({ project }: IProjectCard) => {
 					</div>
 				</div>
 				<div className="flex flex-col gap-2">
-					<h3 className="text-slate-200 font-bold text-lg">
+					<h3 className="text-slate-200 font-bold text-lg group-hover/card:text-teal-400 md:group-hover/card:text-slate-200 transition">
 						{project.title}
-						<IconExternalLink className="inline-block ml-2 mb-2 group-hover/card:text-teal-400 md:group-hover/card:text-slate-200 transition" />
+						<IconExternalLink className="inline-block ml-2 mb-2" />
 					</h3>
 					<p className="text-sm">{project.description}</p>
 					<Bullets bullets={project.stack} />
