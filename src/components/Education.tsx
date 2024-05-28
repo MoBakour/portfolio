@@ -51,7 +51,7 @@ const EducationCard = ({ education }: IEducationCard) => {
 		<a href={education.link} target="_blank">
 			<div className="group-hover/container:opacity-60 md:!opacity-100 hover:!opacity-100 group/card flex flex-col gap-4 p-4 py-4 transition rounded-lg hover:bg-slate-800/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg md:hover:bg-transparent md:hover:shadow-none md:hover:drop-shadow-none cursor-pointer">
 				<header>
-					<div className="flex justify-between items-center">
+					<div className="flex justify-between items-center md:flex-col md:items-start">
 						<h2 className="text-xl font-bold group-hover/card:text-teal-400 md:group-hover/card:text-slate-200 transition">
 							{education.institution}
 							<IconExternalLink className="inline-block ml-2 mb-2" />
