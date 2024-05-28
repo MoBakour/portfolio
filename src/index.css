@@ -58,22 +58,6 @@ html {
 	}
 }
 
-.animate-slideFromRight {
-	animation: slideFromRight 1s forwards;
-}
-
-@keyframes slideFromRight {
-	from {
-		transform: translateX(100%);
-		opacity: 0;
-	}
-
-	to {
-		transform: translateX(0);
-		opacity: 1;
-	}
-}
-
 .animate-progress {
 	animation: progress 1s forwards;
 }

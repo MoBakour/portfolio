@@ -3,7 +3,7 @@ import Line from "./Line";
 
 const About = () => {
 	return (
-		<section id="about" className="animate-slideFromRight">
+		<section id="about">
 			<h2 className="uppercase text-lg font-bold">About</h2>
 
 			<article className="p-4 relative">
