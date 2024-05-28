@@ -86,8 +86,8 @@ const Education = () => {
 				<Line bottom right vertical size="long" />
 
 				{/* education cards */}
-				{educationData.map((data) => (
-					<EducationCard education={data} />
+				{educationData.map((data, index) => (
+					<EducationCard education={data} key={index} />
 				))}
 			</article>
 		</section>

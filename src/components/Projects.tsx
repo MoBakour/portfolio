@@ -1,15 +1,19 @@
 import IconBxLink from "../icons/IconBxLink";
 import IconExternalLink from "../icons/IconExternalLink";
 import IconGithub from "../icons/IconGithub";
+import Line from "./Line";
+import FadeInDiv from "./FadeInDiv";
+import Bullets from "./Bullets";
+import { useState } from "react";
+import IconChevronCompactDown from "../icons/IconChevronCompactDown";
+
 import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
 import StockAIThumbnail from "../images/stockai-thumbnail.png";
 import WeSchoolThumbnail from "../images/weschool-thumbnail.png";
 import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
-import Line from "./Line";
-import FadeInDiv from "./FadeInDiv";
-import Bullets from "./Bullets";
+import GpacalcThumbnail from "../images/gpacalc-thumbnail.png";
 
 enum Techs {
 	HTML = "HTML",
@@ -108,6 +112,15 @@ const projectsData: IProject[] = [
 		repo: "https://github.com/MoBakour/Axcellent",
 		stack: [Techs.TYPESCRIPT, Techs.TELEGRAF],
 	},
+	{
+		title: "Advanced GPA Calculator Tool",
+		description:
+			"An advanced GPA calculator tool enriched with many useful features such as real-time calculation, saving data for future visits, grading system customization ability, toggling semesters for calculation, and sharing results via links",
+		image: GpacalcThumbnail,
+		repo: "https://github.com/MoBakour/gpa_calculator_tool",
+		link: "https://gpa-calculator-tool.netlify.app",
+		stack: [Techs.REACT, Techs.TAILWIND, Techs.TYPESCRIPT],
+	},
 ];
 
 interface IProjectCard {
@@ -159,6 +172,17 @@ const ProjectCard = ({ project }: IProjectCard) => {
 };
 
 const Projects = () => {
+	const CHUNK = 4;
+	const [count, setCount] = useState(CHUNK);
+	const [showIncrement, setShowIncrement] = useState(
+		projectsData.length > CHUNK
+	);
+
+	const incrementCount = () => {
+		setShowIncrement(projectsData.length > count + CHUNK);
+		setCount((prev) => (prev += CHUNK));
+	};
+
 	return (
 		<section id="projects">
 			<h2 className="uppercase text-lg font-bold">Projects</h2>
@@ -168,12 +192,22 @@ const Projects = () => {
 				<Line top left horizontal size="long" />
 				<Line top left vertical size="short" />
 
-				{projectsData.map((project) => (
+				{projectsData.slice(0, count).map((project) => (
 					<FadeInDiv percentage={10} key={project.title}>
 						<ProjectCard project={project} />
 					</FadeInDiv>
 				))}
 			</div>
+
+			{showIncrement && (
+				<button
+					className="hover:text-teal-400 w-fit m-auto flex flex-col justify-center items-center transition cursor-pointer"
+					onClick={incrementCount}
+				>
+					<p>Show more</p>
+					<IconChevronCompactDown />
+				</button>
+			)}
 		</section>
 	);
 };
