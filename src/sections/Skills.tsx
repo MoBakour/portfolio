@@ -1,5 +1,5 @@
 import { useRef, useEffect, useState } from "react";
-import Line from "./Line";
+import Line from "../components/Line";
 
 const skills = [
 	{
@@ -66,7 +66,7 @@ const Skills = () => {
 	}, []);
 
 	return (
-		<section id="skills" ref={domRef}>
+		<section ref={domRef}>
 			<h2 className="uppercase text-lg font-bold">Skills</h2>
 
 			<div className="px-4 py-1 relative">

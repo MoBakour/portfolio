@@ -1,6 +1,6 @@
 import IconExternalLink from "../icons/IconExternalLink";
-import Bullets from "./Bullets";
-import Line from "./Line";
+import Bullets from "../components/Bullets";
+import Line from "../components/Line";
 
 interface IEducation {
 	date: string;
@@ -75,7 +75,7 @@ const EducationCard = ({ education }: IEducationCard) => {
 
 const Education = () => {
 	return (
-		<section id="education">
+		<section>
 			<h2 className="uppercase text-lg font-bold">Education</h2>
 
 			<article className="p-4 relative group/container flex flex-col gap-4">

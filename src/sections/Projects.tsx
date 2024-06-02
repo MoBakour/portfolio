@@ -1,9 +1,9 @@
 import IconBxLink from "../icons/IconBxLink";
 import IconExternalLink from "../icons/IconExternalLink";
 import IconGithub from "../icons/IconGithub";
-import Line from "./Line";
-import FadeInDiv from "./FadeInDiv";
-import Bullets from "./Bullets";
+import Line from "../components/Line";
+import FadeInDiv from "../components/FadeInDiv";
+import Bullets from "../components/Bullets";
 import { useState } from "react";
 import IconChevronCompactDown from "../icons/IconChevronCompactDown";
 
@@ -184,7 +184,7 @@ const Projects = () => {
 	};
 
 	return (
-		<section id="projects">
+		<section>
 			<h2 className="uppercase text-lg font-bold">Projects</h2>
 
 			<div className="p-4 relative group/container flex flex-col gap-6">

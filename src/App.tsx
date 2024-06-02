@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import FadeInDiv from "./components/FadeInDiv";
-import About from "./components/About";
+import About from "./sections/About";
 import Header from "./components/Header";
-import Education from "./components/Education";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
+import Education from "./sections/Education";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
 
 const sections = [
 	{ name: "about", element: <About /> },
@@ -52,6 +52,7 @@ const App = () => {
 					{sections.map((section, index) => (
 						<FadeInDiv
 							key={index}
+							id={section.name}
 							className="min-h-screen py-10 flex justify-center items-center"
 						>
 							{section.element}
