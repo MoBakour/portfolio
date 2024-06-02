@@ -33,10 +33,11 @@ const educationData: IEducation[] = [
 		institution: "MongoDB University",
 		title: "MongoDB Node.js Developer Path",
 		courses: [
-			"MongoDB CRUD Operations",
+			"Database CRUD Operations",
 			"MongoDB Aggregation",
 			"MongoDB Atlas",
-			"MongoDB Data Modeling",
+			"Data Modeling",
+			"MongoDB Node.js Driver",
 		],
 		link: "https://learn.mongodb.com/c/_TSeC5WwQF2aky4Mm4Wrmw",
 	},
