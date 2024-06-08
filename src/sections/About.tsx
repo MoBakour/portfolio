@@ -41,11 +41,11 @@ const About = () => {
 
 			<a
 				title="Download Resume"
-				className="cursor-pointer w-fit flex justify-center items-center gap-2 bg-teal-400/20 text-teal-400 font-bold text-xl rounded-full py-2 px-4 m-auto mt-8 transition hover:opacity-80"
+				className="cursor-pointer w-fit flex justify-center items-center gap-2 bg-teal-400/20 text-teal-400 font-bold text-xl rounded-full py-2 px-4 m-auto mt-8 transition hover:bg-teal-400/10"
 				href="/Mohamed_Bakour_Resume.docx"
 				download="Mohamed_Bakour_Resume.docx"
 			>
-				<span>Download my Resume</span>{" "}
+				<span className="uppercase">Download My Resume</span>{" "}
 				<IconDownload className="text-2xl" />
 			</a>
 		</section>
