@@ -9,7 +9,7 @@ import IconChevronCompactDown from "../icons/IconChevronCompactDown";
 
 import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
-import StockAIThumbnail from "../images/stockai-thumbnail.png";
+// import StockAIThumbnail from "../images/stockai-thumbnail.png";
 import WeSchoolThumbnail from "../images/weschool-thumbnail.png";
 import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
