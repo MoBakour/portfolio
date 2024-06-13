@@ -96,13 +96,13 @@ const projectsData: IProject[] = [
         ],
     },
     {
-        title: "SwordyType - Customizable Typing Speed Test Game",
+        title: "Advanced GPA Calculator Tool",
         description:
-            "A customizable typing speed test game website that offers multiple test modes, languages, and settings.",
-        image: SwordyTypeThumbnail,
-        repo: "https://github.com/MoBakour/SwordyType",
-        link: "https://swordytype.netlify.app",
-        stack: [Techs.HTML, Techs.CSS, Techs.JAVASCRIPT],
+            "An advanced GPA calculator tool enriched with many useful features such as real-time calculation, saving data for future visits, grading system customization ability, toggling semesters for calculation, and sharing results via links",
+        image: GpacalcThumbnail,
+        repo: "https://github.com/MoBakour/gpa_calculator_tool",
+        link: "https://gpa-calculator-tool.netlify.app",
+        stack: [Techs.REACT, Techs.TAILWIND, Techs.TYPESCRIPT],
     },
     {
         title: "Axcellent - A Telegram Utility Bot",
@@ -113,13 +113,13 @@ const projectsData: IProject[] = [
         stack: [Techs.TYPESCRIPT, Techs.TELEGRAF],
     },
     {
-        title: "Advanced GPA Calculator Tool",
+        title: "SwordyType - Customizable Typing Speed Test Game",
         description:
-            "An advanced GPA calculator tool enriched with many useful features such as real-time calculation, saving data for future visits, grading system customization ability, toggling semesters for calculation, and sharing results via links",
-        image: GpacalcThumbnail,
-        repo: "https://github.com/MoBakour/gpa_calculator_tool",
-        link: "https://gpa-calculator-tool.netlify.app",
-        stack: [Techs.REACT, Techs.TAILWIND, Techs.TYPESCRIPT],
+            "A customizable typing speed test game website that offers multiple test modes, languages, and settings.",
+        image: SwordyTypeThumbnail,
+        repo: "https://github.com/MoBakour/SwordyType",
+        link: "https://swordytype.netlify.app",
+        stack: [Techs.HTML, Techs.CSS, Techs.JAVASCRIPT],
     },
 ];
 
