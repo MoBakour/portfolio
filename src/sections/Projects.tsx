@@ -67,7 +67,7 @@ const projectsData: IProject[] = [
             "An npm library for creating and managing local filesystem based databases in Node.js servers",
         image: PotatoDBThumbnail,
         repo: "https://github.com/MoBakour/potatodb",
-        link: "https://potatodb.onrender.com",
+        link: "https://potatodb.netlify.app",
         stack: [Techs.NODE, Techs.NPM, Techs.JAVASCRIPT],
     },
     // {
