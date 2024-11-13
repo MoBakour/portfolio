@@ -7,6 +7,7 @@ import Bullets from "../components/Bullets";
 import { useState } from "react";
 import IconChevronCompactDown from "../icons/IconChevronCompactDown";
 
+import MallikniThumbnail from "../images/mallikni-thumbnail.png";
 import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
 // import StockAIThumbnail from "../images/stockai-thumbnail.png";
@@ -45,9 +46,26 @@ interface IProject {
 
 const projectsData: IProject[] = [
     {
-        title: "Peeko - Social Media Web App",
+        title: "Mallikni | Real-Estate Web App",
         description:
-            "A social media web application that features authentication, validation, file uploads, and various CRUD operations",
+            "A MERN stack real-estate web app platform to advertise properties worldwide. Features authentication, filtering, CRUD, content management, and much more",
+        image: MallikniThumbnail,
+        repo: "https://github.com/MoBakour/mallikni",
+        link: "https://github.com/MoBakour/mallikni",
+        stack: [
+            Techs.REACT,
+            Techs.NODE,
+            Techs.EXPRESS,
+            Techs.MONGODB,
+            Techs.TAILWIND,
+            Techs.AWS,
+            Techs.TYPESCRIPT,
+        ],
+    },
+    {
+        title: "Peeko | Social Media Web App",
+        description:
+            "A social media MERN stack web application that features authentication, validation, file uploads, and various CRUD operations",
         image: PeekoThumbnail,
         repo: "https://github.com/MoBakour/peeko",
         link: "https://peeko.netlify.com",
@@ -62,7 +80,7 @@ const projectsData: IProject[] = [
         ],
     },
     {
-        title: "PotatoDB - NPM Library for Creating Filesystem Databases",
+        title: "PotatoDB | NPM Library for Creating Filesystem Databases",
         description:
             "An npm library for creating and managing local filesystem based databases in Node.js servers",
         image: PotatoDBThumbnail,
@@ -80,7 +98,7 @@ const projectsData: IProject[] = [
     // 	stack: [Techs.PYTHON, Techs.TYPESCRIPT, Techs.REACT, Techs.TAILWIND],
     // },
     {
-        title: "WeSchool - Class Management Web App",
+        title: "WeSchool | Class Management Web App",
         description:
             "A web app for managing school classrooms and students. Features authentication, validation, and various CRUD operations.",
         image: WeSchoolThumbnail,
@@ -105,7 +123,7 @@ const projectsData: IProject[] = [
         stack: [Techs.REACT, Techs.TAILWIND, Techs.TYPESCRIPT],
     },
     {
-        title: "Axcellent - A Telegram Utility Bot",
+        title: "Axcellent | A Telegram Utility Bot",
         description:
             "A telegram utility tools bot equipped with various helpful tools that allow downloading videos from different platforms, uploading images to the cloud, converting file formats, and more.",
         image: AxcellentThumbnail,
@@ -113,7 +131,7 @@ const projectsData: IProject[] = [
         stack: [Techs.TYPESCRIPT, Techs.TELEGRAF],
     },
     {
-        title: "SwordyType - Customizable Typing Speed Test Game",
+        title: "SwordyType | Customizable Typing Speed Test Game",
         description:
             "A customizable typing speed test game website that offers multiple test modes, languages, and settings.",
         image: SwordyTypeThumbnail,
