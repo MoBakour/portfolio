@@ -51,7 +51,6 @@ const projectsData: IProject[] = [
             "A MERN stack real-estate web app platform to advertise properties worldwide. Features authentication, filtering, CRUD, content management, and much more",
         image: MallikniThumbnail,
         repo: "https://github.com/MoBakour/mallikni",
-        link: "https://github.com/MoBakour/mallikni",
         stack: [
             Techs.REACT,
             Techs.NODE,
@@ -65,7 +64,7 @@ const projectsData: IProject[] = [
     {
         title: "Peeko | Social Media Web App",
         description:
-            "A social media MERN stack web application that features authentication, validation, file uploads, and various CRUD operations",
+            "A MERN stack social media web application that features authentication, validation, file uploads, and various CRUD operations",
         image: PeekoThumbnail,
         repo: "https://github.com/MoBakour/peeko",
         link: "https://peeko.netlify.com",
@@ -85,7 +84,7 @@ const projectsData: IProject[] = [
             "An npm library for creating and managing local filesystem based databases in Node.js servers",
         image: PotatoDBThumbnail,
         repo: "https://github.com/MoBakour/potatodb",
-        link: "https://potatodb.netlify.app",
+        link: "https://npmjs.com/package/potatodb",
         stack: [Techs.NODE, Techs.NPM, Techs.JAVASCRIPT],
     },
     // {
