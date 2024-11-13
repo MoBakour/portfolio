@@ -67,7 +67,7 @@ const projectsData: IProject[] = [
             "A MERN stack social media web application that features authentication, validation, file uploads, and various CRUD operations",
         image: PeekoThumbnail,
         repo: "https://github.com/MoBakour/peeko",
-        link: "https://peeko.netlify.com",
+        link: "https://peeko.netlify.app",
         stack: [
             Techs.REACT,
             Techs.NODE,
