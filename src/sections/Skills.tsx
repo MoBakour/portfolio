@@ -35,12 +35,16 @@ const skills = [
         percentage: 95,
     },
     {
-        name: "Nest.js",
-        percentage: 80,
-    },
-    {
         name: "MongoDB",
         percentage: 93,
+    },
+    {
+        name: "MySQL",
+        percentage: 85,
+    },
+    {
+        name: "Python",
+        percentage: 89,
     },
 ];
 

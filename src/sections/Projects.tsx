@@ -11,6 +11,7 @@ import MallikniThumbnail from "../images/mallikni-thumbnail.png";
 import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
 // import StockAIThumbnail from "../images/stockai-thumbnail.png";
+import CVDThumbnail from "../images/cvd-thumbnail.png";
 import WeSchoolThumbnail from "../images/weschool-thumbnail.png";
 import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
@@ -33,6 +34,8 @@ enum Techs {
     AWS = "AWS",
     NPM = "NPM",
     TELEGRAF = "Telegraf.js",
+    FLASK = "Flask",
+    SKLEARN = "Scikit-learn",
 }
 
 interface IProject {
@@ -96,6 +99,21 @@ const projectsData: IProject[] = [
     // 	link: "https://stock-ai.netlify.app",
     // 	stack: [Techs.PYTHON, Techs.TYPESCRIPT, Techs.REACT, Techs.TAILWIND],
     // },
+    {
+        title: "Cardiovascular Disease Prediction | Machine Learning Application",
+        description:
+            "A machine learning application that predicts the presence of cardiovascular diseases in patients based on their health data. With a React frontend and a Flask backend",
+        image: CVDThumbnail,
+        repo: "https://github.com/MoBakour/cardiovascular-disease-prediction",
+        stack: [
+            Techs.PYTHON,
+            Techs.SKLEARN,
+            Techs.FLASK,
+            Techs.REACT,
+            Techs.TYPESCRIPT,
+            Techs.TAILWIND,
+        ],
+    },
     {
         title: "WeSchool | Class Management Web App",
         description:
