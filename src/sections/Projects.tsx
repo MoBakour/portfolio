@@ -54,6 +54,7 @@ const projectsData: IProject[] = [
             "A MERN stack real-estate web app platform to advertise properties worldwide. Features authentication, filtering, CRUD, content management, and much more",
         image: MallikniThumbnail,
         repo: "https://github.com/MoBakour/mallikni",
+        link: "https://mallikni.netlify.app",
         stack: [
             Techs.REACT,
             Techs.NODE,
@@ -87,7 +88,7 @@ const projectsData: IProject[] = [
             "An npm library for creating and managing local filesystem based databases in Node.js servers",
         image: PotatoDBThumbnail,
         repo: "https://github.com/MoBakour/potatodb",
-        link: "https://npmjs.com/package/potatodb",
+        link: "https://potatodb.netlify.app",
         stack: [Techs.NODE, Techs.NPM, Techs.JAVASCRIPT],
     },
     // {
