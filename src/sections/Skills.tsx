@@ -7,7 +7,7 @@ const skills = [
         percentage: 96,
     },
     {
-        name: "TailwindCSS",
+        name: "Tailwind CSS",
         percentage: 92,
     },
     {

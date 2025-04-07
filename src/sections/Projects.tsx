@@ -22,7 +22,7 @@ enum Techs {
     CSS = "CSS",
     JAVASCRIPT = "JavaScript",
     TYPESCRIPT = "TypeScript",
-    TAILWIND = "TailwindCSS",
+    TAILWIND = "Tailwind CSS",
     SASS = "SASS",
     EJS = "EJS",
     REACT = "React",
@@ -146,6 +146,7 @@ const projectsData: IProject[] = [
             "A telegram utility tools bot equipped with various helpful tools that allow downloading videos from different platforms, uploading images to the cloud, converting file formats, and more.",
         image: AxcellentThumbnail,
         repo: "https://github.com/MoBakour/Axcellent",
+        link: "https://t.me/AxcellentBot",
         stack: [Techs.TYPESCRIPT, Techs.TELEGRAF],
     },
     {
@@ -207,8 +208,9 @@ const ProjectCard = ({ project }: IProjectCard) => {
     );
 };
 
+const CHUNK = 4;
+
 const Projects = () => {
-    const CHUNK = 4;
     const [count, setCount] = useState(CHUNK);
     const [showIncrement, setShowIncrement] = useState(
         projectsData.length > CHUNK
@@ -228,8 +230,12 @@ const Projects = () => {
                 <Line top left horizontal size="long" />
                 <Line top left vertical size="short" />
 
-                {projectsData.slice(0, count).map((project) => (
-                    <FadeInDiv percentage={10} key={project.title}>
+                {projectsData.map((project, index) => (
+                    <FadeInDiv
+                        percentage={10}
+                        key={project.title}
+                        className={index < count ? "" : "hidden"}
+                    >
                         <ProjectCard project={project} />
                     </FadeInDiv>
                 ))}
