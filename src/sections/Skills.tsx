@@ -3,18 +3,6 @@ import Line from "../components/Line";
 
 const skills = [
     {
-        name: "HTML/CSS",
-        percentage: 96,
-    },
-    {
-        name: "Tailwind CSS",
-        percentage: 92,
-    },
-    {
-        name: "SASS/SCSS",
-        percentage: 86,
-    },
-    {
         name: "JavaScript",
         percentage: 100,
     },
@@ -27,24 +15,36 @@ const skills = [
         percentage: 96,
     },
     {
+        name: "Vue.js",
+        percentage: 85,
+    },
+    {
+        name: "SASS/SCSS",
+        percentage: 86,
+    },
+    {
         name: "Node.js",
-        percentage: 92,
+        percentage: 97,
     },
     {
         name: "Express.js",
         percentage: 95,
     },
     {
+        name: "Nest.js",
+        percentage: 85,
+    },
+    {
         name: "MongoDB",
         percentage: 93,
     },
     {
-        name: "MySQL",
-        percentage: 85,
-    },
-    {
         name: "Python",
         percentage: 89,
+    },
+    {
+        name: "SQL",
+        percentage: 87,
     },
 ];
 
