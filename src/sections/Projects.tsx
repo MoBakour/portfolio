@@ -12,6 +12,7 @@ import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
 // import StockAIThumbnail from "../images/stockai-thumbnail.png";
 import CVDThumbnail from "../images/cvd-thumbnail.png";
+import WhatStatsThumbnail from "../images/whatstats-thumbnail.png";
 import WeSchoolThumbnail from "../images/weschool-thumbnail.png";
 import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
@@ -26,6 +27,7 @@ enum Techs {
     SASS = "SASS",
     EJS = "EJS",
     REACT = "React",
+    VUE = "Vue",
     NODE = "Node.js",
     EXPRESS = "Express",
     NEST = "Nest",
@@ -114,6 +116,15 @@ const projectsData: IProject[] = [
             Techs.TYPESCRIPT,
             Techs.TAILWIND,
         ],
+    },
+    {
+        title: "WhatStats | WhatApp Chat Analyzer",
+        description:
+            "A web app that analyzes WhatsApp chat data and provides various statistics and visualizations.",
+        image: WhatStatsThumbnail,
+        repo: "https://github.com/MoBakour/whatstats",
+        link: "https://whatstats.vercel.app",
+        stack: [Techs.VUE, Techs.TYPESCRIPT, Techs.TAILWIND],
     },
     {
         title: "WeSchool | Class Management Web App",
