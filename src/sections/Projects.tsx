@@ -8,6 +8,7 @@ import { useState } from "react";
 import IconChevronCompactDown from "../icons/IconChevronCompactDown";
 
 import MallikniThumbnail from "../images/mallikni-thumbnail.png";
+import SmartcareThumbnail from "../images/smartcare-thumbnail.png";
 import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
 // import StockAIThumbnail from "../images/stockai-thumbnail.png";
@@ -38,6 +39,7 @@ enum Techs {
     TELEGRAF = "Telegraf.js",
     FLASK = "Flask",
     SKLEARN = "Scikit-learn",
+    GENAI = "GenAI",
 }
 
 interface IProject {
@@ -65,6 +67,24 @@ const projectsData: IProject[] = [
             Techs.TAILWIND,
             Techs.AWS,
             Techs.TYPESCRIPT,
+        ],
+    },
+    {
+        title: "Smartcare | AI-Powered Smart Wound Dressing with Real-Time Monitoring",
+        description:
+            "A smart wound dressing monitoring application with real-time AI wound status detection and GenAI health analysis",
+        image: SmartcareThumbnail,
+        repo: "https://github.com/MoBakour/smartcare",
+        link: "https://smartcare-ai.netlify.app",
+        stack: [
+            Techs.VUE,
+            Techs.TYPESCRIPT,
+            Techs.TAILWIND,
+            Techs.MONGODB,
+            Techs.PYTHON,
+            Techs.FLASK,
+            Techs.GENAI,
+            Techs.SKLEARN,
         ],
     },
     {
