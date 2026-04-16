@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import "tailwindcss";
+
+@theme {
+    /* COLORS */
+    --color-primary: var(--color-teal-400);
+    --color-secondary: var(--color-sky-600);
+    --color-background: var(--color-slate-900);
+    --color-text: var(--color-slate-200);
+    --color-card-bg: var(--color-slate-800);
+
+    /* BREAKPOINTS */
+    --breakpoint-xl: 1279px;
+    --breakpoint-lg: 1023px;
+    --breakpoint-md: 767px;
+    --breakpoint-sm: 639px;
+}
+
+* {
+    font-family: "Quicksand";
+    scroll-behavior: smooth;
+}
+
+/* scrollbar styling */
+::-webkit-scrollbar {
+    width: 5px;
+    @apply w-[5px] bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* animations */
+.animate-blink {
+    animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.animate-slideFromLeft {
+    animation: slideFromLeft 1s forwards;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-progress {
+    animation: progress 1s forwards;
+}
+
+@keyframes progress {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+.animate-unprogress {
+    animation: unprogress 1s forwards;
+}
+
+@keyframes unprogress {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
