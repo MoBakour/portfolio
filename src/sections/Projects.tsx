@@ -18,28 +18,28 @@ import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
 import AxcellentThumbnail from "../images/axcellent-thumbnail.png";
 import GpacalcThumbnail from "../images/gpacalc-thumbnail.png";
 
-enum Techs {
-    HTML = "HTML",
-    CSS = "CSS",
-    JAVASCRIPT = "JavaScript",
-    TYPESCRIPT = "TypeScript",
-    TAILWIND = "Tailwind CSS",
-    SASS = "SASS",
-    EJS = "EJS",
-    REACT = "React",
-    VUE = "Vue",
-    NODE = "Node.js",
-    EXPRESS = "Express",
-    NEST = "Nest",
-    MONGODB = "MongoDB",
-    PYTHON = "Python",
-    AWS = "AWS",
-    NPM = "NPM",
-    TELEGRAF = "Telegraf.js",
-    FLASK = "Flask",
-    SKLEARN = "Scikit-learn",
-    GENAI = "GenAI",
-}
+const Techs = {
+    HTML: "HTML",
+    CSS: "CSS",
+    JAVASCRIPT: "JavaScript",
+    TYPESCRIPT: "TypeScript",
+    TAILWIND: "Tailwind CSS",
+    SASS: "SASS",
+    EJS: "EJS",
+    REACT: "React",
+    VUE: "Vue",
+    NODE: "Node.js",
+    EXPRESS: "Express",
+    NEST: "Nest",
+    MONGODB: "MongoDB",
+    PYTHON: "Python",
+    AWS: "AWS",
+    NPM: "NPM",
+    TELEGRAF: "Telegraf.js",
+    FLASK: "Flask",
+    SKLEARN: "Scikit-learn",
+    GENAI: "GenAI",
+} as const;
 
 interface IProject {
     title: string;
@@ -47,7 +47,7 @@ interface IProject {
     image: string;
     repo: string;
     link?: string;
-    stack: Techs[];
+    stack: (typeof Techs)[keyof typeof Techs][];
 }
 
 const projectsData: IProject[] = [

@@ -9,11 +9,11 @@ interface ILine {
     size?: "short" | "long" | "longer";
 }
 
-enum Sizes {
-    SHORT = 60,
-    LONG = 90,
-    LONGER = 105,
-}
+const Sizes = {
+    SHORT: 60,
+    LONG: 90,
+    LONGER: 105,
+} as const;
 
 const Line = ({
     className = "",
