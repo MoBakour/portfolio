@@ -21,12 +21,11 @@ const About = () => {
                         (also go by MoBakour or Swordax)
                     </span>{" "}
                     from Syria, born in the United Arab Emirates. I am a
-                    Software Engineering student at Istinye University in
-                    Istanbul. Back in 2019, I decided to start diving into the
-                    world of web development and coding. It was then when I
-                    started learning concepts of frontend and server-side
-                    development and started building projects to challenge
-                    myself and build stuff I could show to others.
+                    Software Engineer and a tech enthusiast. Back in 2019, I
+                    decided to start diving into the world of web development
+                    and coding. It was then when I started learning concepts of
+                    fullstack web development and started building projects to
+                    challenge myself and make stuff I could show others.
                 </p>
 
                 <br />

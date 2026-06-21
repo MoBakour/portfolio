@@ -7,11 +7,13 @@ import { BsChevronCompactDown } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 
+import AttendifyThumbnail from "../images/attendify-thumbnail.png";
 import MallikniThumbnail from "../images/mallikni-thumbnail.png";
 import SmartcareThumbnail from "../images/smartcare-thumbnail.png";
 import PeekoThumbnail from "../images/peeko-thumbnail.png";
 import PotatoDBThumbnail from "../images/potatodb-thumbnail.png";
 import CVDThumbnail from "../images/cvd-thumbnail.png";
+import CimasArtasiThumbnail from "../images/cimasartasi-thumbnail.png";
 import WhatStatsThumbnail from "../images/whatstats-thumbnail.png";
 import WeSchoolThumbnail from "../images/weschool-thumbnail.png";
 import SwordyTypeThumbnail from "../images/swordytype-thumbnail.png";
@@ -32,13 +34,17 @@ const Techs = {
     EXPRESS: "Express",
     NEST: "Nest",
     MONGODB: "MongoDB",
+    POSTGRESQL: "PostgreSQL",
     PYTHON: "Python",
     AWS: "AWS",
     NPM: "NPM",
     TELEGRAF: "Telegraf.js",
     FLASK: "Flask",
-    SKLEARN: "Scikit-learn",
+    ML: "Machine Learning",
     GENAI: "GenAI",
+    GO: "Go",
+    VECTORDB: "Vector DB",
+    AI: "Artificial Intelligence",
 } as const;
 
 interface IProject {
@@ -52,20 +58,19 @@ interface IProject {
 
 const projectsData: IProject[] = [
     {
-        title: "Mallikni | Real-Estate Web App",
+        title: "Attendify | Facial Recognition and Geofencing Attendance System",
         description:
-            "A MERN stack real-estate web app platform to advertise properties worldwide. Features authentication, filtering, CRUD, content management, and much more",
-        image: MallikniThumbnail,
-        repo: "https://github.com/MoBakour/mallikni",
-        link: "https://mallikni.netlify.app",
+            "An AI-Powered attendance system that prevents students from faking attendance using AI facial recognition and GPS geofencing techniques",
+        image: AttendifyThumbnail,
+        repo: "https://github.com/MoBakour/attendify",
+        link: "https://attendifyimiz.netlify.app",
         stack: [
             Techs.REACT,
-            Techs.NODE,
-            Techs.EXPRESS,
-            Techs.MONGODB,
             Techs.TAILWIND,
-            Techs.AWS,
+            Techs.GO,
             Techs.TYPESCRIPT,
+            Techs.VECTORDB,
+            Techs.AI,
         ],
     },
     {
@@ -78,21 +83,21 @@ const projectsData: IProject[] = [
         stack: [
             Techs.VUE,
             Techs.TYPESCRIPT,
-            Techs.TAILWIND,
             Techs.MONGODB,
             Techs.PYTHON,
             Techs.FLASK,
             Techs.GENAI,
-            Techs.SKLEARN,
+            Techs.ML,
+            Techs.AI,
         ],
     },
     {
-        title: "Peeko | Social Media Web App",
+        title: "Mallikni | Real-Estate Web App",
         description:
-            "A MERN stack social media web application that features authentication, validation, file uploads, and various CRUD operations",
-        image: PeekoThumbnail,
-        repo: "https://github.com/MoBakour/peeko",
-        link: "https://peeko.netlify.app",
+            "A MERN stack real-estate web app platform to advertise properties worldwide. Features authentication, filtering, CRUD, content management, and much more",
+        image: MallikniThumbnail,
+        repo: "https://github.com/MoBakour/mallikni",
+        link: "https://mallikni.netlify.app",
         stack: [
             Techs.REACT,
             Techs.NODE,
@@ -113,6 +118,24 @@ const projectsData: IProject[] = [
         stack: [Techs.NODE, Techs.NPM, Techs.JAVASCRIPT],
     },
     {
+        title: "Peeko | Social Media Web App",
+        description:
+            "A MERN stack social media web application that features authentication, validation, file uploads, and various CRUD operations",
+        image: PeekoThumbnail,
+        repo: "https://github.com/MoBakour/peeko",
+        link: "https://peeko.netlify.app",
+        stack: [
+            Techs.REACT,
+            Techs.NODE,
+            Techs.EXPRESS,
+            Techs.MONGODB,
+            Techs.TAILWIND,
+            Techs.AWS,
+            Techs.TYPESCRIPT,
+        ],
+    },
+
+    {
         title: "Cardiovascular Disease Prediction | Machine Learning Application",
         description:
             "A machine learning application that predicts the presence of cardiovascular diseases in patients based on their health data. With a React frontend and a Flask backend",
@@ -120,12 +143,22 @@ const projectsData: IProject[] = [
         repo: "https://github.com/MoBakour/cardiovascular-disease-prediction",
         stack: [
             Techs.PYTHON,
-            Techs.SKLEARN,
             Techs.FLASK,
             Techs.REACT,
             Techs.TYPESCRIPT,
             Techs.TAILWIND,
+            Techs.ML,
+            Techs.AI,
         ],
+    },
+    {
+        title: "Course Ranking System | PFS-CIMAS-ARTASI Multi-Criteria Decision-Making Model",
+        description:
+            "A specialized academic decision-support application that ingests multi-expert evaluations to algorithmically rank university courses using complex Picture Fuzzy Set (PFS) calculations.",
+        image: CimasArtasiThumbnail,
+        repo: "https://github.com/MoBakour/course-ranking-mcdm",
+        link: "https://course-ranking.netlify.app",
+        stack: [Techs.TYPESCRIPT, Techs.REACT],
     },
     {
         title: "WhatStats | WhatApp Chat Analyzer",

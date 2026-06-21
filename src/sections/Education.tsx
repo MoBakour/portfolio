@@ -14,7 +14,7 @@ interface IEducation {
 
 const educationData: IEducation[] = [
     {
-        date: "Oct 2022 — Present",
+        date: "Oct 2022 — Jun 2026",
         institution: "Istinye University",
         location: "Istanbul — Turkey",
         title: "Bachelor's degree in Software Engineering",
