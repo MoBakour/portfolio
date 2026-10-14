@@ -7,6 +7,8 @@ import { BsChevronCompactDown } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 
+import ServaThumbnail from "../images/serva-thumbnail.png";
+import GhaslniThumbnail from "../images/ghaslni-thumbnail.png";
 import AttendifyThumbnail from "../images/attendify-thumbnail.png";
 import MallikniThumbnail from "../images/mallikni-thumbnail.png";
 import SmartcareThumbnail from "../images/smartcare-thumbnail.png";
@@ -45,18 +47,56 @@ const Techs = {
     GO: "Go",
     VECTORDB: "Vector DB",
     AI: "Artificial Intelligence",
+    REACT_NATIVE: "React Native",
+    NEXT: "Next.js",
+    REDIS: "Redis",
+    SOCKETIO: "Socket.IO",
+    STRIPE: "Stripe",
 } as const;
 
 interface IProject {
     title: string;
     description: string;
     image: string;
-    repo: string;
+    repo?: string;
     link?: string;
     stack: (typeof Techs)[keyof typeof Techs][];
 }
 
 const projectsData: IProject[] = [
+    {
+        title: "Serva | Restaurant Operating System SaaS",
+        description:
+            "A restaurant operations SaaS with QR-code menus powered with a virtual AI voice waiter, live kitchen and POS dashboards, an owner mobile app, Stripe payments, and advanced analytics",
+        image: ServaThumbnail,
+        link: "https://serva.menu",
+        stack: [
+            Techs.REACT_NATIVE,
+            Techs.TYPESCRIPT,
+            Techs.EXPRESS,
+            Techs.POSTGRESQL,
+            Techs.REDIS,
+            Techs.SOCKETIO,
+            Techs.STRIPE,
+            Techs.TAILWIND,
+            Techs.GENAI,
+        ],
+    },
+    {
+        title: "Ghaslni | On-Demand Car Wash Platform",
+        description:
+            "An on-demand car wash platform with customer and washer mobile apps, an admin dashboard, dispatch to the nearest washer, live tracking, and online payments",
+        image: GhaslniThumbnail,
+        link: "https://ghaslni.com",
+        stack: [
+            Techs.REACT_NATIVE,
+            Techs.NEXT,
+            Techs.NEST,
+            Techs.POSTGRESQL,
+            Techs.SOCKETIO,
+            Techs.TYPESCRIPT,
+        ],
+    },
     {
         title: "Attendify | Facial Recognition and Geofencing Attendance System",
         description:
@@ -220,7 +260,7 @@ interface IProjectCard {
 
 const ProjectCard = ({ project }: IProjectCard) => {
     return (
-        <a href={project.repo} target="_blank">
+        <a href={project.repo ?? project.link} target="_blank">
             <div className="group-hover/container:opacity-60 max-md:opacity-100! hover:opacity-100! group/card p-4 py-6 flex max-sm:flex-col-reverse gap-4 transition rounded-lg hover:bg-card-bg/50 hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] hover:drop-shadow-lg max-md:hover:bg-transparent max-md:hover:shadow-none max-md:hover:drop-shadow-none cursor-pointer">
                 <div className="flex flex-col w-fit gap-2">
                     <img
@@ -229,14 +269,16 @@ const ProjectCard = ({ project }: IProjectCard) => {
                         className="w-[160px] h-[96px] max-w-max"
                     />
                     <div className="flex justify-center items-center gap-2">
-                        <a
-                            href={project.repo}
-                            className="text-2xl m-2 transition hover:text-text"
-                            title="Github repo"
-                            target="_blank"
-                        >
-                            <FaGithub />
-                        </a>
+                        {project.repo && (
+                            <a
+                                href={project.repo}
+                                className="text-2xl m-2 transition hover:text-text"
+                                title="Github repo"
+                                target="_blank"
+                            >
+                                <FaGithub />
+                            </a>
+                        )}
                         {project.link && (
                             <a
                                 href={project.link}
