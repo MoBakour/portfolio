@@ -42,7 +42,7 @@ const About = () => {
                 title="Download Resume"
                 className="cursor-pointer w-fit flex justify-center items-center gap-2 bg-primary/20 text-primary font-bold text-xl rounded-full py-2 px-4 m-auto mt-8 transition hover:bg-primary/10"
                 href="/resume.pdf"
-                download="Mohamed_Bakour_Resume.pdf"
+                download="resume.pdf"
             >
                 <span className="uppercase">Download My Resume</span>{" "}
                 <HiOutlineDownload className="text-3xl" />
